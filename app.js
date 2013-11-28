@@ -30,6 +30,6 @@ app.get('/partials/:name', route.partials)
 app.get('*', route.index)
 
 //Launch
-var port = 8123 //process.env.PORT || 8123
+var port = process.env.PORT || 8123
 app.listen(port)
 console.log("Node @ http://localhost:" + port + "...\n")
