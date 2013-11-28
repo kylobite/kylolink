@@ -1,15 +1,7 @@
-Node Project Template
+Kylolink Blog
 ---------------------
+Version 0.0.0
 
-Because sometimes<br>
-```bash
-git clone git@github.com:kylobite/Node-Project-Template.git
-```
-is more convenient than<br>
-```bash
-npm init
-<editor> package.json
-npm init
-```
+Just a blog I'm working on.
 ***
-&copy; Copyright 2013 Kylobite under [WTFPL](LICENSE).
+&copy; Copyright 2013 Kylobite under [MIT](LICENSE).
