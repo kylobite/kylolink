@@ -6,6 +6,9 @@ global-reset()
 main-color          = #708090 //#fa5b4d
 background-colour   = #faf9f0
 
+//document-size(value)
+//    value * 0.01
+
 body
     font-family 'Helvetica'
     background-color background-colour
@@ -26,20 +29,20 @@ header
         color darken(#fff, 15%)
 
 .container
-    width 60%
+    //width document-size(attr())
     margin 50px auto
     overflow hidden
 
 .main-content
     float left
-    width 50%
+    width 70%
 
     p
         margin-bottom 20px
 
 .sidebar
     float left
-    width 50%
+    width 30%
 
     .widget
         border-radius 3px
@@ -65,7 +68,7 @@ p
     line-height 1.8
 
 footer
-    width 60%
+    //width document-size(attr())
     margin 50px auto
     border-top 1px dotted #ccc
     padding-top 5px

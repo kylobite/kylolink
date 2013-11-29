@@ -112,20 +112,19 @@ header p {
   color: #d9d9d9;
 }
 .container {
-  width: 60%;
   margin: 50px auto;
   overflow: hidden;
 }
 .main-content {
   float: left;
-  width: 50%;
+  width: 70%;
 }
 .main-content p {
   margin-bottom: 20px;
 }
 .sidebar {
   float: left;
-  width: 50%;
+  width: 30%;
 }
 .sidebar .widget {
   -webkit-border-radius: 3px;
@@ -154,7 +153,6 @@ p {
   line-height: 1.8;
 }
 footer {
-  width: 60%;
   margin: 50px auto;
   border-top: 1px dotted #ccc;
   padding-top: 5px;
