@@ -3,7 +3,7 @@
 
 global-reset()
 
-main-color          = #fa5b4d
+main-color          = #708090 //#fa5b4d
 background-colour   = #faf9f0
 
 body
@@ -14,28 +14,32 @@ body
 header
     font-family 'Quicksand'
     padding 50px 10px
-    color #fff
-    font-size 25px
     text-align center
     background-color main-color
     border-bottom 1px solid darken(main-color, 30%)
     text-shadow 0 -1px 0 darken(main-color, 30%)
+    h1
+        font-size 28px
+        color #fff
+    p
+        font-size 15px
+        color darken(#fff, 15%)
 
 .container
-    width 500px
+    width 60%
     margin 50px auto
     overflow hidden
 
 .main-content
     float left
-    width 300px
+    width 50%
 
     p
         margin-bottom 20px
 
 .sidebar
     float left
-    width 200px
+    width 50%
 
     .widget
         border-radius 3px
@@ -61,11 +65,17 @@ p
     line-height 1.8
 
 footer
-    width 500px
+    width 60%
     margin 50px auto
     border-top 1px dotted #ccc
     padding-top 5px
     font-size 13px
+    span
+        padding-top 2px
+    span.copyright
+        float left
+    span.engine
+        float right
 
 
 
