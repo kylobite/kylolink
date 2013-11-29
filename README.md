@@ -1,6 +1,5 @@
 Kylolink Blog
 ---------------------
-Version 0.0.0
 
 Just a blog I'm working on.
 ***
