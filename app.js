@@ -26,8 +26,9 @@ app.use(express.static(__dirname + '/public'))
 
 //Routes
 app.get('/', route.index)
+app.get('/name', route.name)
+app.get('/name/:user', route.user)
 app.get('/partials/:name', route.partials)
-app.get('*', route.index)
 
 //Launch
 var port = process.env.PORT || 8123

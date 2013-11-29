@@ -1,7 +1,15 @@
-!!! 5
-meta(charset='utf-8')
-title= title
-link(rel='stylesheet', href='/stylesheets/style.css')
-div
-	block app
-block javascript
+!!!5
+html
+    head
+        title= title
+        link(rel='stylesheet', href='/stylesheets/style.css')
+    body
+        header
+            h1 Home
+        .container
+            .main-content
+                block content
+            .sidebar
+                block sidebar
+        footer
+            p Running on Node.js with Express, Jade, and Stylus
