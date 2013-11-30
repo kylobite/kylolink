@@ -103,11 +103,14 @@ body {
 }
 header {
   font-family: 'Quicksand';
-  padding: 50px 10px;
+  padding: 15px 10px;
   text-align: center;
   background: #708090;
   border-bottom: 1px solid #4e5a65;
   text-shadow: 0 -1px 0 #4e5a65;
+}
+header img {
+  margin: 0 auto 5px;
 }
 header h1 {
   font-size: 28px;
@@ -194,6 +197,7 @@ footer span.engine {
   opacity: 0;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   filter: alpha(opacity=0);
+  visibility: hidden;
   cursor: default;
   -webkit-transform: scale(1.5);
   -moz-transform: scale(1.5);
@@ -210,6 +214,7 @@ footer span.engine {
   opacity: 1;
   -ms-filter: none;
   filter: none;
+  visibility: visible;
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -o-transform: scale(1);
@@ -225,14 +230,19 @@ footer span.engine {
   -o-transform: scale(0.9);
   -ms-transform: scale(0.9);
   transform: scale(0.9);
+  pointer-event: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .modal,
 .app {
-  -webkit-transition: -webkit-transform 0.4s ease;
-  -moz-transition: -moz-transform 0.4s ease;
-  -o-transition: -o-transform 0.4s ease;
-  -ms-transition: -ms-transform 0.4s ease;
-  transition: transform 0.4s ease;
+  -webkit-transition: -webkit-transform 1s ease, -webkit-filter 0s ease 1s;
+  -moz-transition: -moz-transform 1s ease, -webkit-filter 0s ease 1s;
+  -o-transition: -o-transform 1s ease, -webkit-filter 0s ease 1s;
+  -ms-transition: -ms-transform 1s ease, -webkit-filter 0s ease 1s;
+  transition: transform 1s ease, -webkit-filter 0s ease 1s;
 }
 .btn {
   background: #708090;
@@ -250,5 +260,4 @@ footer span.engine {
 }
 .btn.on {
   cursor: default;
-  pointer-event: none;
 }
