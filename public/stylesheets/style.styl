@@ -3,24 +3,23 @@
 
 global-reset()
 
-main-color          = #708090 //#fa5b4d
-background-colour   = #faf9f0
-
-//document-size(value)
-//    value * 0.01
+primary     = #708090
+slate-grey  = #faf9f0
 
 body
     font-family 'Helvetica'
-    background-color background-colour
+    background slate-grey
     color #444
+    z-index 1
+    transform translate3d(0)
 
 header
     font-family 'Quicksand'
     padding 50px 10px
     text-align center
-    background-color main-color
-    border-bottom 1px solid darken(main-color, 30%)
-    text-shadow 0 -1px 0 darken(main-color, 30%)
+    background primary
+    border-bottom 1px solid darken(primary, 30%)
+    text-shadow 0 -1px 0 darken(primary, 30%)
     h1
         font-size 28px
         color #fff
@@ -29,28 +28,24 @@ header
         color darken(#fff, 15%)
 
 .container
-    //width document-size(attr())
     margin 50px auto
     overflow hidden
 
 .main-content
     float left
     width 70%
-
     p
         margin-bottom 20px
 
 .sidebar
     float left
     width 30%
-
     .widget
         border-radius 3px
         border 1px solid #ccc
         margin-left 20px
-        background-color background-colour
-        box-shadow inset 0 0 0 3px rgba(#fff, 0.8), 0 3px 0 -2px rgba(#000, 0.1)
-
+        background slate-grey
+        box-shadow inset 0 0 0 3px rgba(#fff, 0.8), 0 3px 0 -2px rgba(0,0,0,0.1)
         h1
             font-family 'Quicksand'
             margin 13px 10px 4px
@@ -58,7 +53,6 @@ header
             border-bottom 1px dotted #ddd
             border-radius 2px 2px 0 0
             margin-bottom 10px
-
         p
             font-size 13px
             padding 0 10px
@@ -68,17 +62,73 @@ p
     line-height 1.8
 
 footer
-    //width document-size(attr())
     margin 50px auto
     border-top 1px dotted #ccc
     padding-top 5px
     font-size 13px
+    position relative
     span
         padding-top 2px
     span.copyright
-        float left
+        position absolute
+        left 0
     span.engine
-        float right
+        position absolute
+        right 0
+
+
+.modal
+    width 300px
+    height 200px
+    line-height 200px
+    background rgba(255,255,255,0.95)
+    position fixed
+    margin-top -100px
+    margin-left -150px
+    top 50%
+    left 50%
+    text-align center
+    border-radius 10px
+    box-shadow  0 0 10px 1px rgba(112,128,144,0.5)
+    opacity 0
+    cursor default
+    transform scale(1.5)
+    pointer-event none
+    z-index 9001
+    p
+        padding 15px 0 0
+
+.modal.on
+    opacity 1
+    transform scale(1)
+    cursor pointer
+    pointer-event auto
+
+.app.on
+    -webkit-filter blur(5px) grayscale(50%)
+    transform scale(0.9)
+
+.modal, .app
+    transition transform 0.4s ease
+
+.btn
+    background primary
+    border 1px solid darken(primary, 30%)
+    border-radius 3px
+    color #fff
+    padding 4px 6px
+    cursor pointer
+    pointer-event auto
+    &:hover
+        box-shadow 0 0 3px rgba(0,0,0,0.5)
+.btn.on
+    cursor default
+    pointer-event none
+
+
+
+
+
 
 
 

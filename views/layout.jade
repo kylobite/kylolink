@@ -1,24 +1,12 @@
 !!!5
-html
-    head
-        title= title
-        link(rel='stylesheet', href='/stylesheets/style.css')
-    body
-        header
-            h1  Welcome to Kylolink
-            p   a different way of thinking
-        .container.size
-            .main-content
-                block content
-            .sidebar
-                block sidebar
-        footer.size
-            span.copyright  &copy; Copyright 2013 Kylobite. All rights reserved.
-            span.engine     Running on Node.js with Express, Jade, and Stylus
-        script
-            var size  = (100 - (((document.body.clientWidth) * 0.01) * 2)) + "%";
-            var sizes = document.getElementsByClassName("size");
-            console.log(size);
-            for (var i = 0, j = sizes.length; i < j; i += 1) {
-                sizes[i].style.width = size;
-            }
+meta(charset='utf-8')
+title= title
+link(rel='stylesheet', href='/stylesheets/style.css')
+header
+    h1  Welcome to Kylolink
+    p   a different way of thinking
+.app(ng-app='app')
+    block app
+.modal
+    | THIS IS A POP UP!
+block javascript
