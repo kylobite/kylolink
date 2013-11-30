@@ -238,11 +238,11 @@ footer span.engine {
 }
 .modal,
 .app {
-  -webkit-transition: -webkit-transform 1s ease, -webkit-filter 0s ease 1s;
-  -moz-transition: -moz-transform 1s ease, -webkit-filter 0s ease 1s;
-  -o-transition: -o-transform 1s ease, -webkit-filter 0s ease 1s;
-  -ms-transition: -ms-transform 1s ease, -webkit-filter 0s ease 1s;
-  transition: transform 1s ease, -webkit-filter 0s ease 1s;
+  -webkit-transition: -webkit-transform 0.4s ease, -webkit-filter 0s ease 0.4s;
+  -moz-transition: -moz-transform 0.4s ease, -webkit-filter 0s ease 0.4s;
+  -o-transition: -o-transform 0.4s ease, -webkit-filter 0s ease 0.4s;
+  -ms-transition: -ms-transform 0.4s ease, -webkit-filter 0s ease 0.4s;
+  transition: transform 0.4s ease, -webkit-filter 0s ease 0.4s;
 }
 .btn {
   background: #708090;
