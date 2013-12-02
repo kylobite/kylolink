@@ -26,6 +26,7 @@ app.use(express.static(__dirname + '/public'))
 
 //Routes
 app.get('/', route.index)
+app.get('/test', route.test)
 app.get('/name', route.name)
 app.get('/name/:user', route.user)
 app.get('/partials/:name', route.partials)

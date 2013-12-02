@@ -1,6 +1,9 @@
 exports.index = function(req, res) {
     res.render('index', { layout : 'layout', title : 'Home' })
 }
+exports.test  = function(req, res) {
+    res.render('test', { layout : 'test', title : 'Test' })
+}
 exports.name  = function(req, res) {
     res.render('name', { layout : 'layout', title : 'Name', user : 'Guest' })
 }

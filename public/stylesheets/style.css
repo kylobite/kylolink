@@ -111,6 +111,27 @@ header {
 }
 header img {
   margin: 0 auto 5px;
+  -webkit-transition: -webkit-transform 0.4s ease;
+  -moz-transition: -moz-transform 0.4s ease;
+  -o-transition: -o-transform 0.4s ease;
+  -ms-transition: -ms-transform 0.4s ease;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+header img:hover:not(.on) {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  -webkit-transition: -webkit-transform 0.8s ease;
+  -moz-transition: -moz-transform 0.8s ease;
+  -o-transition: -o-transform 0.8s ease;
+  -ms-transition: -ms-transform 0.8s ease;
+  transition: transform 0.8s ease;
+}
+header img.on {
+  cursor: default;
 }
 header h1 {
   font-size: 28px;
@@ -225,24 +246,25 @@ footer span.engine {
 }
 .app.on {
   -webkit-filter: blur(5px) grayscale(50%);
-  -webkit-transform: scale(0.9);
-  -moz-transform: scale(0.9);
-  -o-transform: scale(0.9);
-  -ms-transform: scale(0.9);
-  transform: scale(0.9);
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
   pointer-event: none;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: default;
 }
 .modal,
 .app {
-  -webkit-transition: -webkit-transform 0.4s ease, -webkit-filter 0s ease 0.4s;
-  -moz-transition: -moz-transform 0.4s ease, -webkit-filter 0s ease 0.4s;
-  -o-transition: -o-transform 0.4s ease, -webkit-filter 0s ease 0.4s;
-  -ms-transition: -ms-transform 0.4s ease, -webkit-filter 0s ease 0.4s;
-  transition: transform 0.4s ease, -webkit-filter 0s ease 0.4s;
+  -webkit-transition: -webkit-transform 0.4s ease, -webkit-filter 0s ease 0.2s;
+  -moz-transition: -moz-transform 0.4s ease, -webkit-filter 0s ease 0.2s;
+  -o-transition: -o-transform 0.4s ease, -webkit-filter 0s ease 0.2s;
+  -ms-transition: -ms-transform 0.4s ease, -webkit-filter 0s ease 0.2s;
+  transition: transform 0.4s ease, -webkit-filter 0s ease 0.2s;
 }
 .btn {
   background: #708090;

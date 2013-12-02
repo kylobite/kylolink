@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+echo "Compiling coffeescripts..."
+coffee --watch --compile --output public/javascripts/ public/coffeescripts/
+echo "Compiling finished!"
+echo "Starting node..."
+foreman start
