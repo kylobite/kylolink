@@ -1,6 +1,3 @@
 #!/usr/bin/env bash
-echo "Compiling coffeescripts..."
-coffee --watch --compile --output public/javascripts/ public/coffeescripts/
-echo "Compiling finished!"
-echo "Starting node..."
-foreman start
+coffee -wc public/javascripts/ &
+supervisor -w public/javascripts/ -e 'js|node' -x node app.js
