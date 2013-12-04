@@ -8,5 +8,13 @@ $(document).ready(function() {
         if (e.keyCode === 27 && $(".btn").is(".on")) {
             $(".modal, .app, .btn, .eye").toggleClass("on");
         }
+        else if (e.keyCode === 27 && $("header, .container, footer").is(":hidden")) {
+            $(".terminal").fadeOut("slow");
+            $("header, .container, footer").fadeIn("slow");
+        }
     })
+    $(".eye").on("click", function() {
+        $(".terminal").fadeIn("slow");
+        $("header, .container, footer").fadeOut("slow");
+    });
 });

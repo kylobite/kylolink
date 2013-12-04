@@ -90,6 +90,7 @@ td {
 a img {
   border: none;
 }
+html,
 body {
   font-family: 'Helvetica';
   background: #faf9f0;
@@ -100,6 +101,9 @@ body {
   -o-transform: translate3d(0);
   -ms-transform: translate3d(0);
   transform: translate3d(0);
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 header {
   font-family: 'Quicksand';
@@ -109,26 +113,29 @@ header {
   border-bottom: 1px solid #4e5a65;
   text-shadow: 0 -1px 0 #4e5a65;
 }
+header:hover:not(.on) {
+  cursor: default;
+}
 header img {
   margin: 0 auto 5px;
+  -webkit-transition: -webkit-transform 0.2s ease;
+  -moz-transition: -moz-transform 0.2s ease;
+  -o-transition: -o-transform 0.2s ease;
+  -ms-transition: -ms-transform 0.2s ease;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+header img:hover:not(.on) {
+  -webkit-transform: rotate(15deg);
+  -moz-transform: rotate(15deg);
+  -o-transform: rotate(15deg);
+  -ms-transform: rotate(15deg);
+  transform: rotate(15deg);
   -webkit-transition: -webkit-transform 0.4s ease;
   -moz-transition: -moz-transform 0.4s ease;
   -o-transition: -o-transform 0.4s ease;
   -ms-transition: -ms-transform 0.4s ease;
   transition: transform 0.4s ease;
-  cursor: pointer;
-}
-header img:hover:not(.on) {
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
-  -webkit-transition: -webkit-transform 0.8s ease;
-  -moz-transition: -moz-transform 0.8s ease;
-  -o-transition: -o-transform 0.8s ease;
-  -ms-transition: -ms-transform 0.8s ease;
-  transition: transform 0.8s ease;
 }
 header img.on {
   cursor: default;
@@ -188,6 +195,7 @@ footer {
   padding-top: 5px;
   font-size: 13px;
   position: relative;
+  z-index: 1;
 }
 footer span {
   padding-top: 2px;
@@ -199,6 +207,18 @@ footer span.copyright {
 footer span.engine {
   position: absolute;
   right: 0;
+}
+.terminal {
+  position: absolute;
+  display: none;
+  background: #000;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+.terminal .text {
+  padding: 20px;
 }
 .modal {
   width: 300px;
@@ -282,4 +302,7 @@ footer span.engine {
 }
 .btn.on {
   cursor: default;
+}
+.off {
+  display: none;
 }

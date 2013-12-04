@@ -6,12 +6,15 @@ global-reset()
 primary     = #faf9f0
 slate-grey  = #708090
 
-body
+html, body
     font-family 'Helvetica'
     background primary
     color #444
     z-index 1
     transform translate3d(0)
+    width 100%
+    height 100%
+    position relative
 
 header
     font-family 'Quicksand'
@@ -20,13 +23,15 @@ header
     background slate-grey
     border-bottom 1px solid darken(slate-grey, 30%)
     text-shadow 0 -1px 0 darken(slate-grey, 30%)
+    &:hover:not(.on)
+        cursor default
     img
         margin 0 auto 5px
-        transition transform 0.4s ease
+        transition transform 0.2s ease
         cursor pointer
         &:hover:not(.on)
-            transform rotate(180deg)
-            transition transform 0.8s ease
+            transform rotate(15deg)
+            transition transform 0.4s ease
     img.on
         cursor default
     h1
@@ -76,6 +81,7 @@ footer
     padding-top 5px
     font-size 13px
     position relative
+    z-index 1
     span
         padding-top 2px
     span.copyright
@@ -85,6 +91,16 @@ footer
         position absolute
         right 0
 
+.terminal
+    position absolute
+    display none
+    background #000
+    color #fff
+    width 100%
+    height 100%
+    z-index 2
+    .text
+        padding 20px
 
 .modal
     width 300px
@@ -137,6 +153,9 @@ footer
         box-shadow 0 0 3px rgba(0,0,0,0.5)
 .btn.on
     cursor default
+
+.off
+    display none
 
 
 
