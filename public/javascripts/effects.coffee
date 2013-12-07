@@ -11,15 +11,19 @@ $ ->
                 .fadeOut("slow")
                 .removeClass "shell"
             $("header, .container, footer").fadeIn "slow"
+        else if e.keyCode is 13 and not $(".terminal").is ":hidden"
+            $(".text .active")
+                .removeClass("active")
+                .prop("disabled", true)
+                .after("<br>> <input type='text' class='active'>")
+            $(".active").focus()
 
     $(".eye").on "click", ->
         if not $(this).is ".on"
             $(".terminal")
                 .fadeIn("slow")
                 .addClass "shell"
-            $("header, .container, footer").fadeOut "slow" 
-            tmp  = $(".text input").val()
+            $("header, .container, footer").fadeOut "slow"
             $(".text input")
+                .addClass("active")
                 .focus()
-                .val("")
-                .val tmp

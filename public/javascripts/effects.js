@@ -12,15 +12,16 @@
       } else if (e.keyCode === 27 && $("header, .container, footer").is(":hidden")) {
         $(".terminal").fadeOut("slow").removeClass("shell");
         return $("header, .container, footer").fadeIn("slow");
+      } else if (e.keyCode === 13 && !$(".terminal").is(":hidden")) {
+        $(".text .active").removeClass("active").prop("disabled", true).after("<br>> <input type='text' class='active'>");
+        return $(".active").focus();
       }
     });
     return $(".eye").on("click", function() {
-      var tmp;
       if (!$(this).is(".on")) {
         $(".terminal").fadeIn("slow").addClass("shell");
         $("header, .container, footer").fadeOut("slow");
-        tmp = $(".text input").val();
-        return $(".text input").focus().val("").val(tmp);
+        return $(".text input").addClass("active").focus();
       }
     });
   });
