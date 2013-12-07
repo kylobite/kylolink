@@ -10,14 +10,17 @@
       if (e.keyCode === 27 && $(".btn").is(".on")) {
         return $(".modal, .app, .btn, .eye").toggleClass("on");
       } else if (e.keyCode === 27 && $("header, .container, footer").is(":hidden")) {
-        $(".terminal").fadeOut("slow");
+        $(".terminal").fadeOut("slow").removeClass("shell");
         return $("header, .container, footer").fadeIn("slow");
       }
     });
     return $(".eye").on("click", function() {
+      var tmp;
       if (!$(this).is(".on")) {
-        $(".terminal").fadeIn("slow");
-        return $("header, .container, footer").fadeOut("slow");
+        $(".terminal").fadeIn("slow").addClass("shell");
+        $("header, .container, footer").fadeOut("slow");
+        tmp = $(".text input").val();
+        return $(".text input").focus().val("").val(tmp);
       }
     });
   });
